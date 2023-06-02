@@ -26,8 +26,8 @@ https:\/\/m\.client\.10010\.com\/mobileserviceimportant\/smart\/smartwisdomCommo
  */
 
 const APIKey = 'YaYa_10010';
-$.notify('中国联通','cookie 写入成功666');
 $ = new API(APIKey, true);
+$.notify('中国联通','cookie 写入成功666');
 if ($request) GetCookie();
 
 function GetCookie() {
