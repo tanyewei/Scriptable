@@ -27,12 +27,11 @@ https:\/\/m\.client\.10010\.com\/mobileserviceimportant\/smart\/smartwisdomCommo
 
 const APIKey = 'YaYa_10010';
 $ = new API(APIKey, true);
-$.notify('中国联通','cookie 写入成功666');
 if ($request) GetCookie();
 
 function GetCookie() {
   if ($request.url.indexOf('smartwisdomCommon') > -1) {
-    const cookie = $request.headers.Cookie;
+    const cookie = $request.headers.cookie;
     $.log($request.headers);
     if (cookie && cookie.indexOf('JSESSIONID') > -1) {
       $.write(cookie, 'cookie');
